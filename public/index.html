@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>A simple NodeJS Chat</title>
+        
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/styles.css" type="text/css" rel="stylesheet" />
+            
+        <!--<script type="text/javascript" src="js/less.js"></script>-->
+        <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1>Simple NodeJS Chat</h1>
+                </div>
+            </div>
+        </div>
+        <div id="chatLogin">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2 text-center">
+                        <form id="yourName" role="form">
+                            <div class="form-group">
+                                <label for="username">Please enter your Username</label>
+                                <input type="text" class="form-control" id="userName">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <div class="userError"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chatContent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="chatBox">
+                            <div class="messageBox"></div>
+                            <textarea placeholder="Type Your Message" class="yourMessage"></textarea>
+                            <div class="chatStatus text-left">Status: <span>Idle</span></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <div class="userBox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/client.js"></script>
+    </body>
+</html>
